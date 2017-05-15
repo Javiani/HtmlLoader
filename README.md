@@ -83,6 +83,6 @@ router.get('/my/other/long/url/home', req =>{
 
 In the example below, we just tell to `HtmlLoader` that the primary key for cached items is `home` so it will download all files once.
 
-### Dependencies
+# Dependencies
 In order to keep development manageable I'm using `Promises A+`. If your browser do not support it you can use a polyfill to address that issue.
 I recommend the [promise-polyfill](https://github.com/taylorhakes/promise-polyfill).
