@@ -8,7 +8,10 @@ export default {
 	output: {
 		path: `${__dirname}/dist/`,
 		filename: 'html-loader.js',
-		publicPath: './dist/'
+		publicPath: './dist/',
+		libraryTarget:'umd',
+		library:'htmlLoader',
+		umdNamedDefine :true
 	},
 
 	plugins :[].concat(
