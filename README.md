@@ -22,26 +22,26 @@ const outlet = document.querySelector('[data-outlet]')
 
 router.get('/:page', req =>{
 
-	let page = req.params.page
+    let page = req.params.page
 
-	HtmlLoader({
-		templateUrl :`templates/${page}/index.htm`,
-		css :`dist/${page}/index.css`,
-		js  :`dist/${page}/index.js`
-	}).then( response =>{
+    HtmlLoader({
+        templateUrl :`templates/${page}/index.htm`,
+        css :`dist/${page}/index.css`,
+        js  :`dist/${page}/index.js`
+    }).then( response =>{
 
-		// Response contains html node, js and css. Also it tells you whenever the content is being loaded or if it just changed
-		// response : { data :{ html, js, css }, state :'load' }
+        // Response contains html node, js and css. Also it tells you whenever the content is being loaded or if it just changed
+        // response : { data :{ html, js, css }, state :'load' }
 
-		outlet.innerHTML = ''
-		outlet.appendChild( response.data.html )
+        outlet.innerHTML = ''
+        outlet.appendChild( response.data.html )
 
-		if( response.state == 'loaded' )
-			console.log('It is loaded \o/')
+        if( response.state == 'loaded' )
+            console.log('It is loaded \o/')
 
-		if( response.state == 'changed' )
-			console.log('It just changed! No need to load assets again...')
-	})
+        if( response.state == 'changed' )
+            console.log('It just changed! No need to load assets again...')
+    })
 })
 ```
 
@@ -53,21 +53,21 @@ You can set a custom key to be used as primary key instead of the default `templ
 
 ```js
 router.get('/my/long/url/home', req =>{
-	HtmlLoader({
-		key :'home',
-		templateUrl :`templates/home/index.htm`,
-		css :`dist/home/index.css`,
-		js  :`dist/home/index.js`
-	})
+    HtmlLoader({
+        key :'home',
+        templateUrl :`templates/home/index.htm`,
+        css :`dist/home/index.css`,
+        js  :`dist/home/index.js`
+    })
 })
 
 router.get('/my/other/long/url/home', req =>{
-	HtmlLoader({
-		key :'home',
-		templateUrl :`templates/home/index.htm`,
-		css :`dist/home/index.css`,
-		js  :`dist/home/index.js`
-	})
+    HtmlLoader({
+        key :'home',
+        templateUrl :`templates/home/index.htm`,
+        css :`dist/home/index.css`,
+        js  :`dist/home/index.js`
+    })
 })
 
 ```
