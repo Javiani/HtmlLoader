@@ -1,0 +1,17 @@
+{
+  "name": "html-loader",
+  "version": "1.0.0",
+  "description": "Loads your html files and assets dynamically",
+  "main": "dist/html-loader.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Javiani",
+  "license": "ISC",
+  "devDependencies": {
+	  "babel-core": "^6.5.2",
+      "babel-loader": "^6.2.2",
+      "babel-preset-es2015": "^6.5.0",
+      "webpack": "^1.12.13"
+  }
+}
