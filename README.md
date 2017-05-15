@@ -37,7 +37,10 @@ router.get('/:page', req =>{
 		outlet.appendChild( response.data.html )
 
 		if( response.state == 'loaded' )
-			jails.start( outlet )
+			console.log('It is loaded \o/')
+
+		if( response.state == 'changed' )
+			console.log('It just changed! No need to load assets again...')
 	})
 })
 ```
