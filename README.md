@@ -11,6 +11,15 @@ Loads your html files and assets dynamically
 - Loads `Javascript` and `Css` automatically
 - The `html`, `css` and `js` files are cached and loaded only once
 
+## Install
+`npm install --save-dev javiani/html-loader`
+
+or
+
+You can install a specific version
+
+`npm install --save-dev javiani/html-loader#1.0.0`
+
 ## Usage / Example
 
 ```js
